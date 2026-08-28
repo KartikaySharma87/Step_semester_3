@@ -1,5 +1,4 @@
 # Step_semester_3
-# Step_semester_3
 
 **Name:** Kartikay Sharma  
 **Reg. No:** RA2511003011887
