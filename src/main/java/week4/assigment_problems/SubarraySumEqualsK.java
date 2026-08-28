@@ -5,7 +5,7 @@ import java.util.HashMap;
 public class SubarraySumEqualsK {
     public static int subarraySum(int[] nums, int k) {
         HashMap<Integer, Integer> prefixSumCounts = new HashMap<>();
-        prefixSumCounts.put(0, 1); // Base case: prefix sum of 0 occurs once before array starts
+        prefixSumCounts.put(0, 1);
 
         int currentSum = 0;
         int count = 0;
@@ -13,7 +13,6 @@ public class SubarraySumEqualsK {
         for (int num : nums) {
             currentSum += num;
 
-            // Check if there is a previous prefix sum such that currentSum - prefixSum = k
             if (prefixSumCounts.containsKey(currentSum - k)) {
                 count += prefixSumCounts.get(currentSum - k);
             }
@@ -26,9 +25,8 @@ public class SubarraySumEqualsK {
 
     public static void main(String[] args) {
         int[] nums1 = {1, 1, 1};
-        System.out.println(subarraySum(nums1, 2)); // Output: 2
+        System.out.println(subarraySum(nums1, 2));
 
         int[] nums2 = {1, -1, 0};
-        System.out.println(subarraySum(nums2, 0)); // Output: 3
-    }
+        System.out.println(subarraySum(nums2, 0));
 }

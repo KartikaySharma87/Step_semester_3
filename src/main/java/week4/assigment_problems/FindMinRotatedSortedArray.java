@@ -8,10 +8,10 @@ public class FindMinRotatedSortedArray {
         while (left < right) {
             int mid = left + (right - left) / 2;
 
-            // If middle element is greater than rightmost element, min is in the right half
+
             if (nums[mid] > nums[right]) {
                 left = mid + 1;
-            } else { // Otherwise, min is in the left half including mid
+            } else {
                 right = mid;
             }
         }
@@ -21,12 +21,12 @@ public class FindMinRotatedSortedArray {
 
     public static void main(String[] args) {
         int[] nums1 = {3, 4, 5, 1, 2};
-        System.out.println(findMin(nums1)); // Output: 1
+        System.out.println(findMin(nums1));
 
         int[] nums2 = {4, 5, 6, 7, 0, 1, 2};
-        System.out.println(findMin(nums2)); // Output: 0
+        System.out.println(findMin(nums2));
 
         int[] nums3 = {11, 13, 15, 17};
-        System.out.println(findMin(nums3)); // Output: 11
+        System.out.println(findMin(nums3));
     }
 }
